@@ -25,8 +25,8 @@ export function NavBar({ nav }: NavBarProps) {
         <Link href="/" className="shrink-0">
           <Image
             src="/Main-logo-Registered.jpg"
-            height={40}
-            width={160}
+            height={32}
+            width={128}
             alt="HomeKey Inspections"
             priority
           />
@@ -40,8 +40,8 @@ export function NavBar({ nav }: NavBarProps) {
               href={link.href}
               className={
                 link.active
-                  ? 'text-sm font-medium text-foreground'
-                  : 'text-sm text-muted-foreground hover:text-foreground transition-colors'
+                  ? 'text-base font-semibold text-foreground'
+                  : 'text-base font-medium text-muted-foreground hover:text-foreground transition-colors'
               }
             >
               {link.label}
@@ -57,7 +57,7 @@ export function NavBar({ nav }: NavBarProps) {
           >
             {nav.langToggle.label}
           </Link>
-          <Button size="sm" render={<Link href="#" />}>
+          <Button size="lg" className="px-4 text-base" render={<Link href="#" />}>
             {nav.cta}
           </Button>
         </div>
@@ -89,14 +89,18 @@ export function NavBar({ nav }: NavBarProps) {
                     href={link.href}
                     className={
                       link.active
-                        ? 'text-sm font-medium text-foreground'
-                        : 'text-sm text-muted-foreground'
+                        ? 'text-base font-semibold text-foreground'
+                        : 'text-base font-medium text-muted-foreground'
                     }
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Button size="sm" className="mt-2" render={<Link href="#" />}>
+                <Button
+                  size="lg"
+                  className="mt-2 px-4 text-base"
+                  render={<Link href="#" />}
+                >
                   {nav.cta}
                 </Button>
               </nav>

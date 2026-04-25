@@ -1,4 +1,4 @@
-# Track newconstruction_landing_20260425 Context
+# Track brand_theme_20260425 Context
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)
