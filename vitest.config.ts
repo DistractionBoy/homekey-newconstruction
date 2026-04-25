@@ -12,6 +12,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'lcov'],
       include: ['lib/**', 'components/**'],
+      exclude: ['components/ui/**'],
     },
   },
   resolve: {
