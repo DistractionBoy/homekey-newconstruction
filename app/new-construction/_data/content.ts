@@ -4,7 +4,7 @@ export type Content = typeof en
 
 export const en = {
   nav: {
-    logo: '🔑 HomeKey',
+    logo: 'HomeKey Inspections',
     links: [
       { label: 'Services', href: '#' },
       { label: 'New Construction', href: '/new-construction', active: true },
@@ -169,7 +169,7 @@ export const en = {
 
 export const es: Content = {
   nav: {
-    logo: '🔑 HomeKey',
+    logo: 'HomeKey Inspections',
     links: [
       { label: 'Servicios', href: '#' },
       { label: 'Nueva Construcción', href: '/new-construction/es', active: true },

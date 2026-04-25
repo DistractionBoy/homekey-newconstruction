@@ -4,9 +4,9 @@ import { NavBar } from './NavBar'
 import { en } from '@/app/new-construction/_data/content'
 
 describe('NavBar', () => {
-  it('renders the logo', () => {
+  it('renders the logo image', () => {
     render(<NavBar nav={en.nav} />)
-    expect(screen.getAllByText('🔑 HomeKey').length).toBeGreaterThan(0)
+    expect(screen.getByRole('img', { name: 'HomeKey Inspections' })).toBeInTheDocument()
   })
 
   it('renders the active nav link', () => {

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -21,8 +22,14 @@ export function NavBar({ nav }: NavBarProps) {
     <header className="border-b border-border/50 bg-background">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-7 py-3.5">
         {/* Logo */}
-        <Link href="/" className="text-sm font-medium">
-          {nav.logo}
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/Main-logo-Registered.jpg"
+            height={40}
+            width={160}
+            alt="HomeKey Inspections"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
