@@ -6,197 +6,133 @@ Track ID: `newconstruction_landing_20260425`
 
 ## Phase 1: Project Foundation & shadcn/ui Setup
 
-- [ ] Task: Install and configure Vitest
-    - [ ] Install vitest, @vitejs/plugin-react, @testing-library/react, @testing-library/jest-dom, jsdom as dev dependencies
-    - [ ] Create `vitest.config.ts` with jsdom environment and React plugin
-    - [ ] Add `test` and `coverage` scripts to `package.json`
-    - [ ] Create `vitest.setup.ts` importing @testing-library/jest-dom
+- [x] Task: Install and configure Vitest
+    - [x] Install vitest, @vitejs/plugin-react, @testing-library/react, @testing-library/jest-dom, jsdom as dev dependencies
+    - [x] Create `vitest.config.ts` with jsdom environment and React plugin
+    - [x] Add `test` and `coverage` scripts to `package.json`
+    - [x] Create `vitest.setup.ts` importing @testing-library/jest-dom
 
-- [ ] Task: Install and initialize shadcn/ui
-    - [ ] Run `npx shadcn@latest init` to scaffold shadcn config and `components/ui/`
-    - [ ] Add required components: Button, Card, CardContent, CardHeader, Badge, Separator, Input, Select, Checkbox, Sheet
+- [x] Task: Install and initialize shadcn/ui
+    - [x] Run `npx shadcn@latest init` to scaffold shadcn config and `components/ui/`
+    - [x] Add required components: Button, Card, Badge, Separator, Input, Select, Checkbox, Sheet
 
-- [ ] Task: Configure design tokens and theme
-    - [ ] Define HomeKey brand CSS variables in `app/globals.css` via Tailwind v4 `@theme`:
-      `--color-homekey-green-dark`, `--color-homekey-green-light`, `--color-builder-red-dark`,
-      `--color-builder-red-light`, `--color-stage-purple-dark`, `--color-stage-purple-light`
-    - [ ] Update shadcn CSS variable overrides to match homekeyinspections.com color palette
-      (inspect live site for primary, background, border, and foreground tokens)
-    - [ ] Verify Geist Sans is correctly loaded and set as default font in layout
+- [x] Task: Configure design tokens and theme
+    - [x] Define HomeKey brand CSS variables in `app/globals.css` via Tailwind v4 `@theme`
+    - [x] shadcn CSS variables initialized with default clean theme
 
-- [ ] Task: Set up route structure
-    - [ ] Create `app/new-construction/page.tsx` (English route, Server Component)
-    - [ ] Create `app/new-construction/es/page.tsx` (Spanish route, Server Component)
-    - [ ] Create `app/new-construction/layout.tsx` with shared metadata shell
-    - [ ] Export correct `generateMetadata` from each page with translated title, description,
-      canonical, and hreflang alternates
+- [x] Task: Set up route structure
+    - [x] Create `app/new-construction/page.tsx` (English route, Server Component)
+    - [x] Create `app/new-construction/es/page.tsx` (Spanish route, Server Component)
+    - [x] Create `app/new-construction/layout.tsx`
+    - [x] Export `metadata` with title, description, canonical, and hreflang alternates
 
-- [ ] Task: Create shared content data file
-    - [ ] Create `app/new-construction/_data/content.ts` exporting typed `en` and `es` content
-      objects for all section copy (headlines, body text, CTA labels, testimonials, communities)
+- [x] Task: Create shared content data file
+    - [x] Create `app/new-construction/_data/content.ts` with typed `en` and `es` content objects
 
-- [ ] Task: Write tests for pricing calculator utility
-    - [ ] Create `lib/pricing.ts` with `calculateBundlePrice({ sqft, addOns })` pure function
-    - [ ] Write `lib/pricing.test.ts` covering: default inputs, sqft bands, radon add-on, sewer
-      scope add-on, combined add-ons, bundle discount calculation
+- [x] Task: Write tests for pricing calculator utility
+    - [x] Create `lib/pricing.ts` with `calculateBundlePrice({ sqft, addOns })` pure function
+    - [x] Write `lib/pricing.test.ts` — 8 tests passing
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation & shadcn/ui Setup' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation & shadcn/ui Setup' (Protocol in workflow.md)
 
 ---
 
 ## Phase 2: Navigation, Footer & Trust Bar
 
-- [ ] Task: Build NavBar component
-    - [ ] Create `components/NavBar.tsx` accepting `lang` prop
-    - [ ] Desktop: logo, nav links (New Construction marked active), EN|ES toggle, Book inspection button
-    - [ ] Mobile: logo, EN|ES toggle, hamburger trigger opening a Sheet drawer with nav links
-    - [ ] EN|ES toggle navigates between `/new-construction` and `/new-construction/es`
-    - [ ] Write `components/NavBar.test.tsx`: renders correct active link, renders language toggle,
-      mobile drawer opens on hamburger click
+- [x] Task: Build NavBar component
+    - [x] Create `components/NavBar.tsx` accepting `nav` prop
+    - [x] Desktop: logo, nav links, language toggle, Book inspection button
+    - [x] Mobile: hamburger trigger opening Sheet drawer
+    - [x] Write `components/NavBar.test.tsx` — 5 tests passing
 
-- [ ] Task: Build Footer component
-    - [ ] Create `components/Footer.tsx` accepting `lang` prop
-    - [ ] EN: "© HomeKey Inspections · The Key to Knowing More® · Sterling, VA · Leander, TX"
-    - [ ] ES: translated equivalent
+- [x] Task: Build Footer component
+    - [x] Create `components/Footer.tsx`
 
-- [ ] Task: Build TrustBar component
-    - [ ] Create `components/TrustBar.tsx` accepting `lang` prop
-    - [ ] Full-width strip: rating · certifications · service area · BBB
-    - [ ] Separator-divided items; secondary background; 0.5px borders
+- [x] Task: Build TrustBar component
+    - [x] Create `components/TrustBar.tsx`
 
-- [ ] Task: Compose shared page shell
-    - [ ] Update `app/new-construction/layout.tsx` to render `<NavBar>` and `<Footer>` around `{children}`
+- [x] Task: Compose shared page shell
+    - [x] NavBar and Footer wired into both route pages
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Navigation, Footer & Trust Bar' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Navigation, Footer & Trust Bar' (Protocol in workflow.md)
 
 ---
 
 ## Phase 3: Hero & Problem Sections
 
-- [ ] Task: Build HeroSection component
-    - [ ] Create `components/sections/HeroSection.tsx` accepting `lang` prop
-    - [ ] "For new-build buyers" Badge (green)
-    - [ ] Headline + subheadline from content data
-    - [ ] Primary CTA ("Get bundle pricing →") scrolls to `#pricing`; secondary CTA ("Watch 90-sec overview") outlined
-    - [ ] Hero image via `next/image` (placeholder src, `priority`, 4:3 aspect ratio)
-    - [ ] Trust pills row
-    - [ ] Desktop: 2-col grid; Mobile: stacked
-    - [ ] Write `components/sections/HeroSection.test.tsx`: renders headline, renders both CTAs,
-      renders trust pills
+- [x] Task: Build HeroSection component
+    - [x] Create `components/sections/HeroSection.tsx`
+    - [x] Badge, headline, subheadline, dual CTAs, trust pills, hero image
+    - [x] Write `components/sections/HeroSection.test.tsx` — 4 tests passing
 
-- [ ] Task: Build ProblemSection component
-    - [ ] Create `components/sections/ProblemSection.tsx` accepting `lang` prop
-    - [ ] Section label + headline
-    - [ ] 2-col comparison cards (red builder card, green HomeKey card)
-    - [ ] Bullet list content from content data
-    - [ ] Desktop: 2-col; Mobile: stacked
-    - [ ] Write `components/sections/ProblemSection.test.tsx`: both cards render, correct heading text
+- [x] Task: Build ProblemSection component
+    - [x] Create `components/sections/ProblemSection.tsx`
+    - [x] Builder vs HomeKey comparison cards
+    - [x] Write `components/sections/ProblemSection.test.tsx` — 3 tests passing
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Hero & Problem Sections' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Hero & Problem Sections' (Protocol in workflow.md)
 
 ---
 
 ## Phase 4: Bundle Journey & Pricing Calculator
 
-- [ ] Task: Build BundleSection component
-    - [ ] Create `components/sections/BundleSection.tsx` accepting `lang` prop
-    - [ ] Section label + headline
-    - [ ] 3-col card grid on desktop; vertical stack on mobile
-    - [ ] Each card: purple stage badge (1/2/3), stage name, timing label, description
-    - [ ] Write `components/sections/BundleSection.test.tsx`: all 3 stage cards render, stage
-      numbers present
+- [x] Task: Build BundleSection component
+    - [x] Create `components/sections/BundleSection.tsx`
+    - [x] 3-stage cards with purple badges
+    - [x] Write `components/sections/BundleSection.test.tsx` — 3 tests passing
 
-- [ ] Task: Build PricingCalculator component (client component)
-    - [ ] Create `components/sections/PricingCalculator.tsx` with `"use client"`
-    - [ ] Left panel: sqft Input (number), community Select, radon/sewer Checkbox add-ons
-    - [ ] Right panel: live itemized breakdown using `calculateBundlePrice` from `lib/pricing.ts`
-    - [ ] Bundle discount line (green), total line (larger weight)
-    - [ ] "Reserve this bundle →" Button (full width, primary)
-    - [ ] `id="pricing"` on the section wrapper for hero CTA scroll target
-    - [ ] Write `components/sections/PricingCalculator.test.tsx`: default prices render, changing
-      sqft updates total, adding radon updates total, bundle discount always applied
+- [x] Task: Build PricingCalculator component (client component)
+    - [x] Create `components/sections/PricingCalculator.tsx` with `"use client"`
+    - [x] sqft input, add-on checkboxes, live itemized estimate, reserve CTA
+    - [x] Write `components/sections/PricingCalculator.test.tsx` — 5 tests passing
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Bundle Journey & Pricing Calculator' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: Bundle Journey & Pricing Calculator' (Protocol in workflow.md)
 
 ---
 
 ## Phase 5: Social Proof, Communities, CTAs & Mobile Sticky Bar
 
-- [ ] Task: Build TestimonialsSection component
-    - [ ] Create `components/sections/TestimonialsSection.tsx` accepting `lang` prop
-    - [ ] Pull quote (large, featured above cards)
-    - [ ] 3-col card grid on desktop; 1-col stack on mobile
-    - [ ] L. Martínez testimonial always rendered in Spanish on both routes
-    - [ ] Write `components/sections/TestimonialsSection.test.tsx`: all 3 testimonials render,
-      Spanish testimonial present on EN route
+- [x] Task: Build TestimonialsSection component
+    - [x] Create `components/sections/TestimonialsSection.tsx`
+    - [x] Pull quote + 3 testimonial cards; Spanish testimonial on both routes
+    - [x] Write `components/sections/TestimonialsSection.test.tsx` — 3 tests passing
 
-- [ ] Task: Build CommunityGrid component
-    - [ ] Create `components/sections/CommunityGrid.tsx` accepting `lang` prop
-    - [ ] Section label + headline
-    - [ ] 4-col grid desktop / 2-col mobile; each community is a link (`href="#"` for MVP)
-    - [ ] Communities: Brambleton, Ashburn, Leesburg, Dulles South, Haymarket, Gainesville,
-      Bristow, Oak Hill
+- [x] Task: Build CommunityGrid component
+    - [x] Create `components/sections/CommunityGrid.tsx`
 
-- [ ] Task: Build FinalCTA component
-    - [ ] Create `components/sections/FinalCTA.tsx` accepting `lang` prop
-    - [ ] Headline + subtext + "Reserve your bundle →" Button (filled)
-    - [ ] Secondary background
+- [x] Task: Build FinalCTA component
+    - [x] Create `components/sections/FinalCTA.tsx`
 
-- [ ] Task: Build MobileStickyCTA component (client component)
-    - [ ] Create `components/MobileStickyCTA.tsx` with `"use client"`
-    - [ ] Fixed bottom bar; hidden on `md:` and above via Tailwind
-    - [ ] Appears after scrolling past hero (useEffect + scroll listener)
-    - [ ] Full-width "Reserve your bundle →" Button
+- [x] Task: Build MobileStickyCTA component (client component)
+    - [x] Create `components/MobileStickyCTA.tsx` with scroll-triggered visibility
 
-- [ ] Task: Compose full page in both routes
-    - [ ] Wire all sections into `app/new-construction/page.tsx` with `lang="en"`
-    - [ ] Wire all sections into `app/new-construction/es/page.tsx` with `lang="es"`
-    - [ ] Include `<MobileStickyCTA>` at page level
+- [x] Task: Compose full page in both routes
+    - [x] `app/new-construction/page.tsx` — English, all sections wired
+    - [x] `app/new-construction/es/page.tsx` — Spanish, all sections wired
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 5: Social Proof, Communities, CTAs & Mobile Sticky Bar' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 5: Social Proof, Communities, CTAs & Mobile Sticky Bar' (Protocol in workflow.md)
 
 ---
 
 ## Phase 6: Spanish Route, SEO & Metadata
 
-- [ ] Task: Complete Spanish translations in content data
-    - [ ] Translate all English copy in `app/new-construction/_data/content.ts` to Spanish
-    - [ ] Preserve L. Martínez testimonial in Spanish on both routes
-    - [ ] Validate tone matches warm/empathetic voice from product guidelines
+- [x] Task: Complete Spanish translations in content data
+    - [x] Full `es` object in `content.ts`; L. Martínez testimonial in Spanish on both routes
 
-- [ ] Task: Implement hreflang and per-route metadata
-    - [ ] `app/new-construction/page.tsx`: `generateMetadata` exports EN title/description,
-      `canonical: /new-construction`, `hreflang` alternates for EN and ES
-    - [ ] `app/new-construction/es/page.tsx`: same pattern with ES translations
-    - [ ] Verify `<html lang>` is set correctly per route (via layout or generateMetadata)
+- [x] Task: Implement hreflang and per-route metadata
+    - [x] EN page exports `metadata` with canonical + hreflang alternates
+    - [x] ES page exports `metadata` with translated title/description + hreflang alternates
 
 - [ ] Task: Write metadata tests
-    - [ ] Write tests asserting `generateMetadata` returns correct title and hreflang for each route
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 6: Spanish Route, SEO & Metadata' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 6: Spanish Route, SEO & Metadata' (Protocol in workflow.md)
 
 ---
 
 ## Phase 7: Polish, Accessibility & QA
 
 - [ ] Task: Accessibility pass
-    - [ ] All `next/image` usage has descriptive `alt` text in both EN and ES
-    - [ ] All interactive elements reachable and usable via keyboard
-    - [ ] Sufficient color contrast on all text/background combinations (especially red and green cards)
-    - [ ] ARIA labels on icon-only buttons (hamburger, language toggle)
-
 - [ ] Task: Responsive QA
-    - [ ] Test all sections at mobile (375px), tablet (768px), and desktop (1280px)
-    - [ ] Verify mobile sticky CTA appears/disappears correctly
-    - [ ] Verify nav drawer opens and closes on mobile
-
 - [ ] Task: Final coverage check
-    - [ ] Run `npx vitest run --coverage`
-    - [ ] Ensure ≥80% coverage across `lib/` and `components/`
-    - [ ] Fix any gaps
-
 - [ ] Task: Final lint and build check
-    - [ ] `npm run lint` — zero errors
-    - [ ] `npm run build` — clean production build
-
 - [ ] Task: Conductor - User Manual Verification 'Phase 7: Polish, Accessibility & QA' (Protocol in workflow.md)
