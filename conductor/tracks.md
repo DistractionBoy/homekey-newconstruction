@@ -9,11 +9,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [x] **Track: Trust Bar Refinement**
-  *Link: [./tracks/trust_bar_20260425/](./tracks/trust_bar_20260425/)*
-
----
-
 - [ ] **Track: Bundle Timeline Visual**
   *Link: [./tracks/bundle_timeline_20260425/](./tracks/bundle_timeline_20260425/)*
 
