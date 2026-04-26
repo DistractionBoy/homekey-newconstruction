@@ -13,6 +13,11 @@
 ## Animation
 - **Framer Motion 12.x** — motion animations; use `useMemo` to instantiate plugins (avoids `react-hooks/refs` lint error)
 - **embla-carousel-autoplay 8.x** — autoplay plugin for shadcn Carousel
+- **react-intersection-observer 10.x** — `useInView` hook for triggering scroll-based animations; used by `AnimatedNumber`
+
+## Reusable Animation Components
+- **`AnimatedNumber`** (`components/ui/AnimatedNumber.tsx`) — count-up animation on scroll-into-view; `"use client"`; props: `value: number`, `suffix?: string`
+- **`FadeUpSection`** (`components/ui/FadeUpSection.tsx`) — fade+lift wrapper on scroll-into-view; `"use client"`; props: `children`, `className?`
 
 ## Fonts
 - **Geist Sans** + **Geist Mono** — loaded via `next/font/google` in `app/layout.tsx`
@@ -37,6 +42,11 @@
 | `npm run test` | Run Vitest (single pass) |
 | `npm run test:watch` | Run Vitest in watch mode |
 | `npm run coverage` | Run Vitest with V8 coverage report |
+
+## Brand Tokens & Styling Conventions
+- Brand color tokens defined in `app/globals.css` `@theme inline` block as `--color-brand-*` (primary, primaryDark, ink, paper, trust, growth, alert, warmth)
+- All interactive buttons use `hover:scale-[1.02] hover:shadow-md transition-all duration-200`
+- Section eyebrow labels alternate: `text-brand-primary` → `text-brand-trust` → `text-brand-growth` for visual rhythm
 
 ## Key Conventions
 - All routes and layouts follow the Next.js App Router file convention (`page.tsx`, `layout.tsx`)
