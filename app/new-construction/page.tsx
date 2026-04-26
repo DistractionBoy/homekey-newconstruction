@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { content } from './_data/content'
 import { NavBar } from '@/components/NavBar'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { TrustBar } from '@/components/TrustBar'
+import { TrustBar } from '@/components/new-construction/TrustBar'
 import { ProblemSection } from '@/components/sections/ProblemSection'
 import { BundleSection } from '@/components/sections/BundleSection'
 import { PricingCalculator } from '@/components/sections/PricingCalculator'
@@ -33,7 +33,7 @@ export default function NewConstructionPage() {
       <NavBar nav={c.nav} />
       <main>
         <HeroSection hero={c.hero} />
-        <TrustBar items={c.trustBar} />
+        <TrustBar />
         <ProblemSection problem={c.problem} />
         <BundleSection bundle={c.bundle} />
         <PricingCalculator pricing={c.pricing} />

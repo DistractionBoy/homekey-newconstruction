@@ -9,7 +9,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Trust Bar Refinement**
+- [~] **Track: Trust Bar Refinement**
   *Link: [./tracks/trust_bar_20260425/](./tracks/trust_bar_20260425/)*
 
 ---
