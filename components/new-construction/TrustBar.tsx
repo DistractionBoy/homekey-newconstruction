@@ -93,14 +93,14 @@ export function TrustBar() {
         </div>
 
         {/* Jason: drop actual SVG files into public/logos/ to activate the logo strip */}
-        <ul
+        {/* <ul
           className="mt-4 flex items-center justify-center gap-6 md:gap-8"
           aria-label="Certification logos"
         >
           {LOGOS.map((logo) => (
-            <li key={logo.src}>
+            <li key={logo.src}> */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              {/* <img
                 src={logo.src}
                 alt={logo.alt}
                 width={80}
@@ -109,7 +109,7 @@ export function TrustBar() {
               />
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   )
