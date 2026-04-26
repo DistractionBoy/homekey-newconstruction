@@ -29,9 +29,9 @@ export function PricingCalculator({ pricing }: PricingCalculatorProps) {
   }
 
   return (
-    <section id="pricing" className="bg-background px-7 py-16">
+    <section id="pricing" className="bg-gradient-to-br from-slate-50 via-white to-orange-50/30 px-7 py-16">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mb-2 text-xs uppercase tracking-widest text-brand-trust">
           {pricing.sectionLabel}
         </p>
         <h2 className="mb-8 text-2xl font-medium text-foreground">{pricing.headline}</h2>
@@ -83,7 +83,7 @@ export function PricingCalculator({ pricing }: PricingCalculatorProps) {
             </div>
 
             <Separator className="my-3 border-dashed" />
-            <div className="flex justify-between text-xs text-[#085041]">
+            <div className="flex justify-between text-xs text-emerald-600">
               <span>{pricing.discountLabel}</span>
               <span>−{fmt(prices.discount)}</span>
             </div>
@@ -98,10 +98,10 @@ export function PricingCalculator({ pricing }: PricingCalculatorProps) {
             <Separator className="my-3" />
             <div className="flex justify-between text-base font-medium">
               <span>{pricing.totalLabel}</span>
-              <span>{fmt(prices.total)}</span>
+              <span className="text-brand-primary font-bold">{fmt(prices.total)}</span>
             </div>
 
-            <Button className="mt-4 w-full" render={<a href="#" />}>
+            <Button className="mt-4 w-full hover:scale-[1.02] hover:shadow-md transition-all duration-200" render={<a href="#" />}>
               {pricing.cta}
             </Button>
           </div>

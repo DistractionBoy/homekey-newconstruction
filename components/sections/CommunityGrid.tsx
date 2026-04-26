@@ -9,7 +9,7 @@ export function CommunityGrid({ communities }: CommunityGridProps) {
   return (
     <section className="bg-background px-7 py-16">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mb-2 text-xs uppercase tracking-widest text-brand-primary">
           {communities.sectionLabel}
         </p>
         <h2 className="mb-8 text-xl font-medium text-foreground">{communities.headline}</h2>
@@ -18,7 +18,7 @@ export function CommunityGrid({ communities }: CommunityGridProps) {
             <Link
               key={name}
               href="#"
-              className="rounded-md bg-secondary px-3 py-2.5 text-xs text-blue-600 hover:underline"
+              className="rounded-md bg-blue-50 px-3 py-2.5 text-xs text-blue-900 transition-colors hover:bg-brand-primary hover:text-white"
             >
               {name} →
             </Link>

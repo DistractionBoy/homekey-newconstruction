@@ -21,7 +21,7 @@ export function ProblemSection({ problem }: ProblemSectionProps) {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
-        <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mb-2 text-xs uppercase tracking-widest text-brand-primary">
           {problem.sectionLabel}
         </p>
         <h2 className="mb-8 max-w-2xl text-2xl font-medium leading-snug text-foreground">

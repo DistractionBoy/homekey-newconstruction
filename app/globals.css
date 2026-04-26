@@ -5,6 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Brand color tokens */
+  --color-brand-primary: #f97316;
+  --color-brand-primaryDark: #ea580c;
+  --color-brand-ink: #0f172a;
+  --color-brand-paper: #fafaf9;
+  --color-brand-trust: #1e40af;
+  --color-brand-growth: #059669;
+  --color-brand-alert: #dc2626;
+  --color-brand-warmth: #fef3c7;
+
   /* HomeKey brand tokens */
   --color-hk-green-dark: var(--hk-green-dark);
   --color-hk-green-light: var(--hk-green-light);

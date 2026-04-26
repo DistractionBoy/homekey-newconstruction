@@ -11,6 +11,7 @@ import { CommunityGrid } from '@/components/sections/CommunityGrid'
 import { FinalCTA } from '@/components/sections/FinalCTA'
 import { Footer } from '@/components/Footer'
 import { MobileStickyCTA } from '@/components/MobileStickyCTA'
+import { FadeUpSection } from '@/components/ui/FadeUpSection'
 
 export const metadata: Metadata = {
   title: 'Paquete de Inspección de Nueva Construcción | HomeKey Inspections',
@@ -33,12 +34,24 @@ export default function NewConstructionEsPage() {
       <NavBar nav={c.nav} />
       <main lang="es">
         <HeroSection hero={c.hero} />
-        <TrustBar />
-        <ProblemSection problem={c.problem} />
-        <BundleTimeline />
-        <PricingCalculator pricing={c.pricing} />
-        <TestimonialsSection testimonials={c.testimonials} />
-        <CommunityGrid communities={c.communities} />
+        <FadeUpSection>
+          <TrustBar />
+        </FadeUpSection>
+        <FadeUpSection>
+          <ProblemSection problem={c.problem} />
+        </FadeUpSection>
+        <FadeUpSection>
+          <BundleTimeline />
+        </FadeUpSection>
+        <FadeUpSection>
+          <PricingCalculator pricing={c.pricing} />
+        </FadeUpSection>
+        <FadeUpSection>
+          <TestimonialsSection testimonials={c.testimonials} />
+        </FadeUpSection>
+        <FadeUpSection>
+          <CommunityGrid communities={c.communities} />
+        </FadeUpSection>
         <FinalCTA finalCta={c.finalCta} />
       </main>
       <Footer footer={c.footer} />

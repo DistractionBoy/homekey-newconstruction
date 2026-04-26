@@ -1,5 +1,6 @@
 import { Hammer, KeyRound, ShieldCheck } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { AnimatedNumber } from '@/components/ui/AnimatedNumber'
 
 type StageData = {
   number: string
@@ -49,9 +50,9 @@ const STAGES: StageData[] = [
 ]
 
 const STATS = [
-  { value: '3', label: 'inspections' },
-  { value: '1', label: 'inspector' },
-  { value: '100%', label: 'advocacy' },
+  { value: 3, suffix: undefined as string | undefined, label: 'inspections' },
+  { value: 1, suffix: undefined as string | undefined, label: 'inspector' },
+  { value: 100, suffix: '%', label: 'advocacy' },
 ]
 
 const DOT_PATTERN = {
@@ -68,7 +69,7 @@ export function BundleTimeline() {
     >
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
-        <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mb-2 text-xs uppercase tracking-widest text-brand-primary">
           The bundle
         </p>
         <h2 className="mb-12 text-2xl font-medium leading-snug text-foreground md:text-3xl">
@@ -205,7 +206,7 @@ export function BundleTimeline() {
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-3xl font-bold text-foreground md:text-4xl">
-                {stat.value}
+                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>

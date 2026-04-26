@@ -8,7 +8,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
   return (
     <section className="bg-secondary px-7 py-16">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mb-2 text-xs uppercase tracking-widest text-brand-growth">
           {testimonials.sectionLabel}
         </p>
         <blockquote className="mb-10 max-w-2xl text-2xl font-medium leading-snug text-foreground">
