@@ -19,11 +19,6 @@ export type SlideData = {
 
 const DEFAULT_SLIDES: SlideData[] = [
   {
-    src: "/inspection-next-level.jpg",
-    alt: "Independent inspector using thermal imaging camera during new home pre-drywall inspection",
-    caption: "Thermal imaging on every inspection — standard.",
-  },
-  {
     src: "/pre-drywall.avif",
     alt: "New residential construction framing stage in Northern Virginia",
     caption: "Catch defects before drywall seals them in.",
@@ -32,6 +27,11 @@ const DEFAULT_SLIDES: SlideData[] = [
     src: "/framing.avif",
     alt: "New homeowner receiving keys after independent inspection-backed closing",
     caption: "Independent advocacy through closing day.",
+  },
+  {
+    src: "/inspection-next-level.jpg",
+    alt: "Independent inspector using thermal imaging camera during new home pre-drywall inspection",
+    caption: "Thermal imaging on every inspection — standard.",
   },
 ]
 
