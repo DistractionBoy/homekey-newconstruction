@@ -9,11 +9,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [x] **Track: Bundle Timeline Visual**
-  *Link: [./tracks/bundle_timeline_20260425/](./tracks/bundle_timeline_20260425/)*
-
----
-
 - [ ] **Track: "The Problem" Section Enhancement**
   *Link: [./tracks/problem_section_20260425/](./tracks/problem_section_20260425/)*
 
