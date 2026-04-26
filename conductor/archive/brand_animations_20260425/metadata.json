@@ -1,0 +1,8 @@
+{
+  "track_id": "brand_animations_20260425",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-04-25T00:00:00Z",
+  "updated_at": "2026-04-25T00:00:00Z",
+  "description": "Brand color tokens, Framer Motion micro-animations (AnimatedNumber, FadeUpSection, hero stagger), and CSS-only background textures"
+}
