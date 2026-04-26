@@ -38,7 +38,7 @@ export const en = {
   ],
   problem: {
     sectionLabel: 'The problem',
-    headline: `Your builder's “preferred inspector” works for your builder. Not for you.`,
+    headline: `Your builder's "preferred inspector" works for your builder. Not for you.`,
     builderCard: {
       title: "Builder's inspector",
       points: [
@@ -89,7 +89,7 @@ export const en = {
   },
   pricing: {
     sectionLabel: 'Bundle pricing',
-    headline: 'Lock in all three at 15% off.',
+    headline: 'Lock in all three — bundle discounts included.',
     inputLabels: {
       sqft: 'Square footage',
       community: 'Build community',
@@ -106,16 +106,38 @@ export const en = {
       'Oak Hill',
       'Other',
     ],
+    homeTypeLabel: 'Home type',
+    homeTypeOptions: [
+      { id: 'sfh', label: 'Single Family / Townhouse' },
+      { id: 'condo', label: 'Condominium' },
+    ],
+    militaryLabel: 'Current or former military (−$25)',
+    estimateLabel: 'Your estimate',
+    viewInvoice: 'View detailed estimate',
+    pricingGuideLabel: 'See full pricing schedule',
+    pricingGuideHref: '/pricing',
+    invoiceTitle: 'Estimated Invoice',
+    invoiceSubtitle: 'New-construction inspection bundle',
+    invoiceNote:
+      'Prices are subject to change without notice. This is an estimate — final pricing confirmed at booking.',
+    invoiceCta: 'Book inspection →',
+    discountLabels: {
+      repeatSfh: 'Repeat customer discount',
+      repeatCondo: 'Repeat customer discount',
+      military: 'Military discount',
+    },
     addons: [
-      { id: 'radon', label: 'Radon testing', price: 150 },
-      { id: 'sewer', label: 'Sewer scope', price: 200 },
+      { id: 'radon', label: 'Radon testing', price: 195 },
+      { id: 'sewer', label: 'Sewer scope', price: 425 },
+      { id: 'mold', label: 'Mold testing (3 samples)', price: 425 },
+      { id: 'infrared', label: 'Leak detection (IR camera)', price: 175 },
     ],
     lineItems: [
       { label: 'Pre-drywall', key: 'preDrywall' },
-      { label: 'Pre-settlement + thermal + mold', key: 'preSettlement' },
-      { label: '11-month warranty', key: 'warranty' },
+      { label: 'Pre-settlement inspection', key: 'preSettlement' },
+      { label: '11-month warranty inspection', key: 'warrantyInspection' },
     ],
-    discountLabel: 'Bundle discount',
+    discountLabel: 'Bundle discounts',
     totalLabel: 'Your total',
     cta: 'Reserve this bundle →',
   },
@@ -125,19 +147,19 @@ export const en = {
       '"HomeKey caught $18K of framing defects before drywall. Builder fixed everything. No fight."',
     items: [
       {
-        quote:
-          '"They found a missing header on a load-bearing wall at pre-drywall. Builder tried to brush it off. The report forced the fix."',
-        attribution: '— M. Rodriguez, Ashburn',
-      },
-      {
-        quote:
-          '"Their 11-month inspection caught HVAC issues 3 days before my warranty expired. Saved me $4K."',
-        attribution: '— J. Chen, Brambleton',
-      },
-      {
         // Always Spanish on both routes
-        quote: '"Mi inspector hablaba español. El reporte fue bilingüe. Todo clarísimo."',
-        attribution: '— L. Martínez, Haymarket',
+        quote: '"Absolutely thrilled with the service we received from the HomeKey Inspections service members today. We are in the process of purchasing a home and were fortunate to have a home inspection contingency included in our contract. Sebastian was thoughtful and thorough and, when he quickly realized there may be a piping issue, enlisted the assistance of Ian to perform a same day sewer scope inspection. As a result, HomeKey identified some major (and very pricey!) issues unknown to the seller, and us. We are so thankful to have these issues identified in advance of closing. I highly recommend anyone in need of inspection services to go with HomeKey, you won\'t be disappointed."',
+        attribution: '— Wendy Coplen',
+      },
+      {
+        quote:
+          '"Home Inspected 03/10/25. 5,000,000 stars if I could. As a first time homebuyer, this process can be very overwhelming. Jay went above and beyond to make sure I understood everything he observed from start to finish. He talked me through all of his concerns, as well as addressing all of mine. I am certain that he didn\'t miss a single square inch of the property as he was extremely thorough. Thank you HomeKey Inspections for giving the confidence and knowledge I needed!!!"',
+        attribution: '— Aaron Jackson',
+      },
+      {
+        quote:
+          '"HomeKey Inspections fit us in on short notice. They rearranged their schedules to do an inspection on the Saturday before Christmas! We spent 5 hours at the home. They were thorough and meticulous. We did mold testing, home inspection, and septic inspection. Due to their findings, we were able to avoid out of a home contract and saved ourselves a lot of headache and money if we had proceeded with the purchase. We were sad to not be purchasing that home, but glad that the inspection found things that helped us make the best decision for our family. A huge Thank you to Ian and Jay! You guys rock!."',
+        attribution: '— Katrina Sullivan',
       },
     ],
   },
@@ -255,7 +277,7 @@ export const es: Content = {
   },
   pricing: {
     sectionLabel: 'Precio del paquete',
-    headline: 'Reserva los tres con 15% de descuento.',
+    headline: 'Reserva los tres — descuentos de paquete incluidos.',
     inputLabels: {
       sqft: 'Pies cuadrados',
       community: 'Comunidad',
@@ -272,16 +294,38 @@ export const es: Content = {
       'Oak Hill',
       'Otra',
     ],
+    homeTypeLabel: 'Tipo de propiedad',
+    homeTypeOptions: [
+      { id: 'sfh', label: 'Casa / Townhouse' },
+      { id: 'condo', label: 'Condominio' },
+    ],
+    militaryLabel: 'Militar activo o veterano (−$25)',
+    estimateLabel: 'Tu estimado',
+    viewInvoice: 'Ver estimado detallado',
+    pricingGuideLabel: 'Ver horario de precios completo',
+    pricingGuideHref: '/pricing/es',
+    invoiceTitle: 'Estimado de costo',
+    invoiceSubtitle: 'Paquete de inspección de nueva construcción',
+    invoiceNote:
+      'Los precios están sujetos a cambios sin previo aviso. Este es un estimado — el precio final se confirma al reservar.',
+    invoiceCta: 'Reservar inspección →',
+    discountLabels: {
+      repeatSfh: 'Descuento de cliente recurrente',
+      repeatCondo: 'Descuento de cliente recurrente',
+      military: 'Descuento militar',
+    },
     addons: [
-      { id: 'radon', label: 'Prueba de radón', price: 150 },
-      { id: 'sewer', label: 'Inspección de alcantarilla', price: 200 },
+      { id: 'radon', label: 'Prueba de radón', price: 195 },
+      { id: 'sewer', label: 'Inspección de alcantarilla', price: 425 },
+      { id: 'mold', label: 'Prueba de moho (3 muestras)', price: 425 },
+      { id: 'infrared', label: 'Detección de fugas (cámara IR)', price: 175 },
     ],
     lineItems: [
       { label: 'Pre-tabla yeso', key: 'preDrywall' },
-      { label: 'Pre-cierre + térmica + moho', key: 'preSettlement' },
-      { label: 'Garantía de 11 meses', key: 'warranty' },
+      { label: 'Inspección pre-cierre', key: 'preSettlement' },
+      { label: 'Inspección de garantía de 11 meses', key: 'warrantyInspection' },
     ],
-    discountLabel: 'Descuento del paquete',
+    discountLabel: 'Descuentos del paquete',
     totalLabel: 'Tu total',
     cta: 'Reservar este paquete →',
   },
@@ -291,19 +335,19 @@ export const es: Content = {
       '"HomeKey encontró $18K en defectos de estructura antes del acabado. El constructor lo arregló todo. Sin problemas."',
     items: [
       {
-        quote:
-          '"Encontraron una viga faltante en una pared de carga antes del acabado. El constructor intentó ignorarlo. El reporte obligó la reparación."',
-        attribution: '— M. Rodriguez, Ashburn',
-      },
-      {
-        quote:
-          '"Su inspección de 11 meses detectó problemas de HVAC 3 días antes de que venciera mi garantía. Ahorré $4K."',
-        attribution: '— J. Chen, Brambleton',
-      },
-      {
         // Always Spanish on both routes
-        quote: '"Mi inspector hablaba español. El reporte fue bilingüe. Todo clarísimo."',
-        attribution: '— L. Martínez, Haymarket',
+        quote: '"Estamos absolutamente encantados con el servicio que recibimos hoy por parte del equipo de HomeKey Inspections. Nos encontramos en pleno proceso de compra de una vivienda y tuvimos la fortuna de haber incluido una cláusula de contingencia sujeta a inspección en nuestro contrato. Sebastian demostró ser muy atento y minucioso; al percatarse rápidamente de que podría existir un problema en las tuberías, solicitó la asistencia de Ian para realizar una inspección de las alcantarillas ese mismo día. Como resultado, HomeKey identificó varios problemas graves (¡y muy costosos!) que eran desconocidos tanto para el vendedor como para nosotros. Estamos sumamente agradecidos de que estos problemas se hayan detectado antes del cierre de la operación. Recomiendo encarecidamente a cualquier persona que necesite servicios de inspección que recurra a HomeKey; no se sentirán decepcionados."',
+        attribution: '— Wendy Coplen',
+      },
+      {
+        quote:
+          '"Inspección de la vivienda realizada el 10/03/25. Le daría 5.000.000 de estrellas si pudiera. Como comprador de una primera vivienda, este proceso puede resultar muy abrumador. Jay se esforzó al máximo para asegurarse de que yo comprendiera todo lo que observó, de principio a fin. Me explicó detalladamente todas sus inquietudes y, al mismo tiempo, respondió a todas las mías. Estoy seguro de que no pasó por alto ni una sola pulgada cuadrada de la propiedad, ya que fue sumamente minucioso. ¡¡¡Gracias, HomeKey Inspections, por brindarme la confianza y el conocimiento que necesitaba!!!"',
+        attribution: '— Aaron Jackson',
+      },
+      {
+        quote:
+          '"HomeKey Inspections nos hizo un hueco en su agenda con muy poca antelación. ¡Reorganizaron sus horarios para realizar una inspección el sábado antes de Navidad! Pasamos 5 horas en la vivienda. Fueron exhaustivos y meticulosos. Realizamos pruebas de detección de moho, una inspección general de la casa y una inspección del sistema séptico. Gracias a sus hallazgos, pudimos desistir del contrato de compraventa y nos ahorramos muchos dolores de cabeza y dinero que habríamos perdido de haber seguido adelante con la adquisición. Nos entristeció no comprar esa casa, pero nos alegró que la inspección revelara aspectos que nos ayudaron a tomar la mejor decisión para nuestra familia. ¡Un enorme agradecimiento a Ian y Jay! ¡Son unos verdaderos cracks!"',
+        attribution: '— Katrina Sullivan',
       },
     ],
   },
