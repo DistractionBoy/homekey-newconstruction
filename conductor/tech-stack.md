@@ -19,6 +19,9 @@
 - **`AnimatedNumber`** (`components/ui/AnimatedNumber.tsx`) — count-up animation on scroll-into-view; `"use client"`; props: `value: number`, `suffix?: string`
 - **`FadeUpSection`** (`components/ui/FadeUpSection.tsx`) — fade+lift wrapper on scroll-into-view; `"use client"`; props: `children`, `className?`
 
+## Reusable Visual Components
+- **`ReviewerAvatar`** (`components/ui/ReviewerAvatar.tsx`) — initials avatar with deterministic color palette; no image files required; props: `name: string`, `color?: string`
+
 ## Fonts
 - **Geist Sans** + **Geist Mono** — loaded via `next/font/google` in `app/layout.tsx`
 
@@ -56,5 +59,7 @@
 - Global styles and brand tokens live in `app/globals.css`
 - HomeKey brand tokens: `--color-hk-green-dark/light`, `--color-builder-red-dark/light`, `--color-stage-purple-dark/light`
 - **`next/image` `priority` prop is deprecated in Next.js 16** — use `loading="eager"` for above-fold images instead
+- **All `next/image` instances with `fill` must include a `sizes` prop** — e.g. `sizes="100vw"` for full-width backgrounds, `sizes="(max-width: 768px) 100vw, 50vw"` for half-width
+- Stage illustrations in `BundleTimeline` are inline React SVG components (not `next/image`) so they inherit `currentColor` for accent color theming
 - **`matchMedia`, `ResizeObserver`, `IntersectionObserver` mocked globally in `vitest.setup.ts`** — required by embla-carousel-react in jsdom
 - Feature-specific components live in `components/new-construction/` (alongside their `.test.tsx` files)
