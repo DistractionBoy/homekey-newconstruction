@@ -4,7 +4,7 @@ import { NavBar } from '@/components/NavBar'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { TrustBar } from '@/components/new-construction/TrustBar'
 import { ProblemSection } from '@/components/sections/ProblemSection'
-import { BundleSection } from '@/components/sections/BundleSection'
+import { BundleTimeline } from '@/components/new-construction/BundleTimeline'
 import { PricingCalculator } from '@/components/sections/PricingCalculator'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { CommunityGrid } from '@/components/sections/CommunityGrid'
@@ -35,7 +35,7 @@ export default function NewConstructionPage() {
         <HeroSection hero={c.hero} />
         <TrustBar />
         <ProblemSection problem={c.problem} />
-        <BundleSection bundle={c.bundle} />
+        <BundleTimeline />
         <PricingCalculator pricing={c.pricing} />
         <TestimonialsSection testimonials={c.testimonials} />
         <CommunityGrid communities={c.communities} />
