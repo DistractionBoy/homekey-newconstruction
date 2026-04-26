@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { HeroSlider } from '@/components/new-construction/HeroSlider'
 import type { Content } from '@/app/new-construction/_data/content'
 
 type HeroSectionProps = {
@@ -37,20 +37,9 @@ export function HeroSection({ hero }: HeroSectionProps) {
         </ul>
       </div>
 
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[#F1EFE8] order-first md:order-last">
-        <Image
-          src="/hero-inspector.jpg"
-          alt={hero.imageAlt}
-          fill
-          className="object-cover"
-          priority
-          onError={undefined}
-        />
-        {/* Placeholder shown when image is absent */}
-        <div className="absolute inset-0 flex items-center justify-center text-xs text-muted-foreground">
-          {hero.imageAlt}
-        </div>
+      {/* Image slider */}
+      <div className="order-first md:order-last">
+        <HeroSlider />
       </div>
     </section>
   )
