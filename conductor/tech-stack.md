@@ -8,6 +8,11 @@
 ## Styling
 - **Tailwind CSS v4** — utility-first CSS; configured via `postcss.config.mjs`
 - **shadcn/ui 4.x** — component library built on `@base-ui/react` (not Radix UI); initialized via `npx shadcn@latest init`
+  - Components added so far: `badge`, `button`, `card`, `checkbox`, `input`, `select`, `separator`, `sheet`, `carousel`
+
+## Animation
+- **Framer Motion 12.x** — motion animations; use `useMemo` to instantiate plugins (avoids `react-hooks/refs` lint error)
+- **embla-carousel-autoplay 8.x** — autoplay plugin for shadcn Carousel
 
 ## Fonts
 - **Geist Sans** + **Geist Mono** — loaded via `next/font/google` in `app/layout.tsx`
@@ -40,3 +45,6 @@
 - **shadcn 4.x uses `render={<element />}` prop instead of `asChild`** — all Base UI components use this pattern; e.g. `<Button render={<a href="..." />}>label</Button>`
 - Global styles and brand tokens live in `app/globals.css`
 - HomeKey brand tokens: `--color-hk-green-dark/light`, `--color-builder-red-dark/light`, `--color-stage-purple-dark/light`
+- **`next/image` `priority` prop is deprecated in Next.js 16** — use `loading="eager"` for above-fold images instead
+- **`matchMedia`, `ResizeObserver`, `IntersectionObserver` mocked globally in `vitest.setup.ts`** — required by embla-carousel-react in jsdom
+- Feature-specific components live in `components/new-construction/` (alongside their `.test.tsx` files)
