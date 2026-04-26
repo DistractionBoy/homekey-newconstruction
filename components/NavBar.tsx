@@ -28,7 +28,7 @@ export function NavBar({ nav }: NavBarProps) {
             height={32}
             width={128}
             alt="HomeKey Inspections"
-            priority
+            loading="eager"
           />
         </Link>
 

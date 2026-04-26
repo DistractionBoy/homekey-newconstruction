@@ -1,0 +1,9 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House frame with structural studs (pre-drywall) -->
+  <polyline points="6,28 32,6 58,28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="12" y="28" width="40" height="30" rx="1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="32" y1="28" x2="32" y2="58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 2.5"/>
+  <line x1="12" y1="43" x2="52" y2="43" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 2.5"/>
+  <line x1="22" y1="28" x2="22" y2="58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 2.5"/>
+  <line x1="42" y1="28" x2="42" y2="58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 2.5"/>
+</svg>

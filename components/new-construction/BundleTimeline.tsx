@@ -2,10 +2,50 @@ import { Hammer, KeyRound, ShieldCheck } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { AnimatedNumber } from '@/components/ui/AnimatedNumber'
 
+type IllustrationProps = { className?: string }
+
+function FramingIllustration({ className }: IllustrationProps) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      <polyline points="6,28 32,6 58,28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect x="12" y="28" width="40" height="30" rx="1" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <line x1="32" y1="28" x2="32" y2="58" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 2.5"/>
+      <line x1="12" y1="43" x2="52" y2="43" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 2.5"/>
+      <line x1="22" y1="28" x2="22" y2="58" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 2.5"/>
+      <line x1="42" y1="28" x2="42" y2="58" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 2.5"/>
+    </svg>
+  )
+}
+
+function SettlementIllustration({ className }: IllustrationProps) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      <polyline points="8,30 32,10 56,30" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect x="15" y="30" width="34" height="22" rx="1" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect x="26" y="40" width="12" height="12" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <circle cx="32" cy="46" r="1.5" fill="currentColor"/>
+      <circle cx="10" cy="54" r="4.5" stroke="currentColor" strokeWidth="2"/>
+      <line x1="14" y1="54" x2="26" y2="54" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="22" y1="54" x2="22" y2="57" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="25" y1="54" x2="25" y2="57" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  )
+}
+
+function WarrantyIllustration({ className }: IllustrationProps) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      <path d="M32 5 L54 15 L54 35 C54 48 43 57 32 61 C21 57 10 48 10 35 L10 15 Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <polyline points="22,33 29,41 42,25" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
 type StageData = {
   number: string
   timingLabel: string
   icon: LucideIcon
+  Illustration: React.FC<IllustrationProps>
   title: string
   description: string
   tint: string
@@ -18,6 +58,7 @@ const STAGES: StageData[] = [
     number: '1',
     timingLabel: 'Week 8–12 of build',
     icon: Hammer,
+    Illustration: FramingIllustration,
     title: 'Pre-Drywall Inspection',
     description:
       'Framing, plumbing, electrical, and HVAC rough-in defects caught before drywall seals them in forever.',
@@ -29,6 +70,7 @@ const STAGES: StageData[] = [
     number: '2',
     timingLabel: 'Days before closing',
     icon: KeyRound,
+    Illustration: SettlementIllustration,
     title: 'Pre-Settlement Inspection',
     description:
       'Full inspection with thermal imaging and ISO-lab mold testing. Findings become your punch list before closing.',
@@ -40,6 +82,7 @@ const STAGES: StageData[] = [
     number: '3',
     timingLabel: '11 months in',
     icon: ShieldCheck,
+    Illustration: WarrantyIllustration,
     title: '11-Month Warranty Inspection',
     description:
       'Catch settling defects and systems failures while the builder is still obligated to fix them.',
@@ -92,7 +135,6 @@ export function BundleTimeline() {
 
           {/* Nodes + connecting bar */}
           <div className="relative flex items-center justify-between px-[16.6%] mb-6">
-            {/* Gradient bar behind nodes */}
             <div
               className="absolute inset-y-1/2 left-[16.6%] right-[16.6%] h-0.5 -translate-y-1/2 bg-gradient-to-r from-orange-400 to-orange-600"
               aria-hidden="true"
@@ -112,6 +154,7 @@ export function BundleTimeline() {
           <div className="grid grid-cols-3 gap-6">
             {STAGES.map((stage) => {
               const Icon = stage.icon
+              const Illus = stage.Illustration
               return (
                 <div
                   key={stage.title}
@@ -121,6 +164,7 @@ export function BundleTimeline() {
                     stage.tint,
                   ].join(' ')}
                 >
+                  <Illus className={`mb-2 w-12 h-12 ${stage.accentColor}`} />
                   <Icon
                     size={20}
                     className={`mb-3 ${stage.accentColor}`}
@@ -148,6 +192,7 @@ export function BundleTimeline() {
         <div className="flex flex-col gap-0 lg:hidden">
           {STAGES.map((stage, index) => {
             const Icon = stage.icon
+            const Illus = stage.Illustration
             return (
               <div key={stage.title}>
                 <div className="flex gap-4">
@@ -176,6 +221,7 @@ export function BundleTimeline() {
                         stage.tint,
                       ].join(' ')}
                     >
+                      <Illus className={`mb-2 w-12 h-12 ${stage.accentColor}`} />
                       <Icon
                         size={20}
                         className={`mb-3 ${stage.accentColor}`}

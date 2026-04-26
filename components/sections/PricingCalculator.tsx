@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Checkbox } from '@/components/ui/checkbox'
+import { ClipboardList, Search } from 'lucide-react'
 import { calculateBundlePrice, type AddOnId } from '@/lib/pricing'
 import type { Content } from '@/app/new-construction/_data/content'
 
@@ -72,6 +73,10 @@ export function PricingCalculator({ pricing }: PricingCalculatorProps) {
 
           {/* Estimate */}
           <div className="rounded-lg border border-border/50 p-5">
+            <div className="mb-4 flex items-center gap-2">
+              <ClipboardList size={28} className="text-brand-primary" aria-hidden="true" />
+              <Search size={22} className="text-brand-primary opacity-70" aria-hidden="true" />
+            </div>
             <p className="mb-4 text-xs text-muted-foreground">Estimated bundle</p>
             <div className="space-y-2">
               {pricing.lineItems.map((item) => (

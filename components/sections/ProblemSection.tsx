@@ -15,6 +15,7 @@ export function ProblemSection({ problem }: ProblemSectionProps) {
           src="/images/unfinished-home-dusk.jpg"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-15"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
@@ -24,7 +25,7 @@ export function ProblemSection({ problem }: ProblemSectionProps) {
         <p className="mb-2 text-xs uppercase tracking-widest text-brand-primary">
           {problem.sectionLabel}
         </p>
-        <h2 className="mb-8 max-w-2xl text-2xl font-medium leading-snug text-foreground">
+        <h2 className="mb-8 max-w-xl text-2xl font-medium leading-snug text-foreground">
           {problem.headline}
         </h2>
 
