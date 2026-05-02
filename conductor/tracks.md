@@ -19,7 +19,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track 1: New Construction Page** — DONE/SHIPPED
   *Implementation: `app/new-construction/`, `components/sections/PricingCalculator.tsx`*
 
-- [~] **Track 2: Homepage**
+- [x] **Track 2: Homepage**
   *Link: [./tracks/homepage_20260502/](./tracks/homepage_20260502/)*
 
 - [ ] **Track 3: Service Detail Pages** (12 service pages + /services index)
