@@ -34,8 +34,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Content Expansion
 
-- [x] **Track 4: Bilingual Support (/es/ Spanish Section)**
-  *Link: [./tracks/bilingual_es_20260502/](./tracks/bilingual_es_20260502/)*
+- [x] **Track 4: Bilingual Support (/es/ Spanish Section)** — COMPLETE (archived)
+  *Implementation: `app/es/`, `components/es/`*
 
 - [x] **Track 6: County and Community Landing Pages** — COMPLETE (archived)
   *Implementation: `app/areas/`, `components/areas/`, `app/areas/_data/`*
@@ -69,8 +69,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Quality / Infrastructure
 
-- [x] **Track 14: Performance, SEO, and Analytics**
-  *Link: [./tracks/performance_seo_20260502/](./tracks/performance_seo_20260502/)*
+- [x] **Track 14: Performance, SEO, and Analytics** — COMPLETE (archived)
+  *Implementation: `lib/json-ld.ts`, `lib/analytics.ts`, `components/JsonLd.tsx`, `next-sitemap.config.js`, `.github/workflows/lighthouse.yml`*
 
 - [ ] **Track 16: Deployment and DevOps**
   *Link: [./tracks/deployment_devops_20260502/](./tracks/deployment_devops_20260502/)*
