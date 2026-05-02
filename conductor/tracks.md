@@ -34,7 +34,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Content Expansion
 
-- [ ] **Track 4: Bilingual Support (/es/ Spanish Section)**
+- [x] **Track 4: Bilingual Support (/es/ Spanish Section)**
   *Link: [./tracks/bilingual_es_20260502/](./tracks/bilingual_es_20260502/)*
 
 - [x] **Track 6: County and Community Landing Pages** — COMPLETE (archived)
