@@ -26,13 +26,14 @@ function initials(name: string): string {
 type ReviewerAvatarProps = {
   name: string
   color?: string
+  className?: string
 }
 
-export function ReviewerAvatar({ name, color }: ReviewerAvatarProps) {
+export function ReviewerAvatar({ name, color, className }: ReviewerAvatarProps) {
   const bg = color ?? deterministicColor(name)
   return (
     <div
-      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${bg} font-semibold text-sm text-white`}
+      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${bg} font-semibold text-sm text-white${className ? ` ${className}` : ''}`}
       aria-label={name}
     >
       {initials(name)}

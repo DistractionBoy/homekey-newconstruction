@@ -11,10 +11,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import type { Content } from '@/app/new-construction/_data/content'
+export type NavData = {
+  logo?: string
+  links: { label: string; href: string; active?: boolean }[]
+  langToggle: { label: string; href: string }
+  cta: string
+  ctaHref?: string
+}
 
 type NavBarProps = {
-  nav: Content['nav']
+  nav: NavData
 }
 
 export function NavBar({ nav }: NavBarProps) {
@@ -57,7 +63,7 @@ export function NavBar({ nav }: NavBarProps) {
           >
             {nav.langToggle.label}
           </Link>
-          <Button size="lg" className="px-4 text-base" render={<Link href="#" />}>
+          <Button size="lg" className="px-4 text-base" render={<Link href={nav.ctaHref ?? '#'} />}>
             {nav.cta}
           </Button>
         </div>
@@ -99,7 +105,7 @@ export function NavBar({ nav }: NavBarProps) {
                 <Button
                   size="lg"
                   className="mt-2 px-4 text-base"
-                  render={<Link href="#" />}
+                  render={<Link href={nav.ctaHref ?? '#'} />}
                 >
                   {nav.cta}
                 </Button>
