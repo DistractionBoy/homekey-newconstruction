@@ -53,14 +53,6 @@ const BADGES: BadgeItem[] = [
   },
 ]
 
-const LOGOS = [
-  { src: '/logos/ashi.svg', alt: 'ASHI' },
-  { src: '/logos/internachi.svg', alt: 'InterNACHI' },
-  { src: '/logos/nrs.svg', alt: 'NRS' },
-  { src: '/logos/bbb.svg', alt: 'BBB' },
-  { src: '/logos/homegauge.svg', alt: 'HomeGauge' },
-  { src: '/logos/ahit.svg', alt: 'AHIT' },
-]
 
 export function TrustBar() {
   return (
@@ -92,24 +84,6 @@ export function TrustBar() {
           })}
         </div>
 
-        {/* Jason: drop actual SVG files into public/logos/ to activate the logo strip */}
-        {/* <ul
-          className="mt-4 flex items-center justify-center gap-6 md:gap-8"
-          aria-label="Certification logos"
-        >
-          {LOGOS.map((logo) => (
-            <li key={logo.src}> */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              {/* <img
-                src={logo.src}
-                alt={logo.alt}
-                width={80}
-                height={32}
-                className="h-7 w-auto opacity-40 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0 md:h-8"
-              />
-            </li>
-          ))}
-        </ul> */}
       </div>
     </div>
   )

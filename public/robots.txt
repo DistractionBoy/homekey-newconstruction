@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+
+# Host
+Host: https://homekeyinspections.com
+
+# Sitemaps
+Sitemap: https://homekeyinspections.com/sitemap.xml

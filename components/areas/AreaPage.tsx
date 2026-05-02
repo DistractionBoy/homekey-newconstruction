@@ -3,6 +3,8 @@ import { Phone, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { NavBar } from '@/components/NavBar'
 import { Footer } from '@/components/Footer'
+import { JsonLd } from '@/components/JsonLd'
+import { localBusinessSchema } from '@/lib/json-ld'
 import type { County, Community } from '@/app/areas/_data/types'
 
 const areaNav = {
@@ -40,6 +42,7 @@ function CountyPageLayout({ county }: { county: County }) {
 
   return (
     <>
+      <JsonLd data={localBusinessSchema()} />
       <NavBar nav={areaNav} />
       <main>
         {/* Hero */}

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { NavBar } from '@/components/NavBar'
 import { Footer } from '@/components/Footer'
+import { JsonLd } from '@/components/JsonLd'
+import { personSchema } from '@/lib/json-ld'
 import type { Inspector } from '@/app/inspectors/_data/inspectors'
 
 const inspectorNav = {
@@ -36,6 +38,15 @@ export function InspectorPage({ inspector }: Props) {
 
   return (
     <>
+      {!isOfficeStaff && (
+        <JsonLd data={personSchema({
+          name: inspector.name,
+          jobTitle: inspector.title,
+          description: inspector.bio?.[0],
+          image: inspector.photo,
+          url: `/inspectors/${inspector.slug}`,
+        })} />
+      )}
       <NavBar nav={inspectorNav} />
       <main>
         {/* Hero header */}

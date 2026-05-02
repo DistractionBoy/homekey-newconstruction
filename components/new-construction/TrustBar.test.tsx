@@ -21,8 +21,4 @@ describe('TrustBar', () => {
     expect(screen.getByText('Accredited business')).toBeInTheDocument()
   })
 
-  it('renders the logo strip container', () => {
-    render(<TrustBar />)
-    expect(screen.getByRole('list', { name: /certification logos/i })).toBeInTheDocument()
-  })
 })

@@ -12,7 +12,7 @@ export function HomepageHero() {
           alt="New home under construction at dusk in Northern Virginia"
           fill
           sizes="100vw"
-          loading="eager"
+          priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />

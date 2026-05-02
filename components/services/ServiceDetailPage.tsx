@@ -5,6 +5,8 @@ import { NavBar } from '@/components/NavBar'
 import { Footer } from '@/components/Footer'
 import { ServiceFAQAccordion } from '@/components/services/ServiceFAQAccordion'
 import { ServiceWhatWeInspect } from '@/components/services/ServiceWhatWeInspect'
+import { JsonLd } from '@/components/JsonLd'
+import { serviceSchema, faqSchema } from '@/lib/json-ld'
 import type { ServiceData } from '@/app/services/_data/types'
 
 const serviceNav = {
@@ -33,6 +35,8 @@ type Props = {
 export function ServiceDetailPage({ data }: Props) {
   return (
     <>
+      <JsonLd data={serviceSchema({ name: data.title, description: data.metaDescription, url: `/services/${data.slug}` })} />
+      {data.faqs.length > 0 && <JsonLd data={faqSchema(data.faqs)} />}
       <NavBar nav={serviceNav} />
       <main>
         {/* Hero */}

@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
+import { JsonLd } from '@/components/JsonLd'
+import { localBusinessSchema } from '@/lib/json-ld'
 import { NavBar } from '@/components/NavBar'
 import { TrustBar } from '@/components/TrustBar'
 import { Footer } from '@/components/Footer'
@@ -8,10 +11,13 @@ import { ServiceCardsSection } from '@/components/homepage/ServiceCardsSection'
 import { DifferenceSection } from '@/components/homepage/DifferenceSection'
 import { InspectorSpotlight } from '@/components/homepage/InspectorSpotlight'
 import { CoverageMap } from '@/components/homepage/CoverageMap'
-import { ReviewsCarousel } from '@/components/homepage/ReviewsCarousel'
 import { BlogTeaser } from '@/components/homepage/BlogTeaser'
 import { HomepageFinalCTA } from '@/components/homepage/HomepageFinalCTA'
 import { homepageNav, homepageTrustBar } from '@/app/_data/homepage'
+
+const ReviewsCarousel = dynamic(
+  () => import('@/components/homepage/ReviewsCarousel').then((m) => m.ReviewsCarousel)
+)
 
 export const metadata: Metadata = {
   title: 'HomeKey Inspections — The Key to Knowing More®',
@@ -34,6 +40,7 @@ const homepageFooter = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={localBusinessSchema()} />
       <NavBar nav={homepageNav} />
       <main>
         <HomepageHero />
