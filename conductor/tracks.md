@@ -24,8 +24,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track 3: Service Detail Pages** — COMPLETE (archived)
   *Implementation: `app/services/`, `components/services/`, `app/services/_data/`*
 
-- [ ] **Track 5: Inspector Bio Pages**
-  *Link: [./tracks/inspector_pages_20260502/](./tracks/inspector_pages_20260502/)*
+- [x] **Track 5: Inspector Bio Pages** — COMPLETE (archived)
+  *Implementation: `app/inspectors/`, `components/inspectors/`, `app/inspectors/_data/`*
 
 - [x] **Track 7: Pricing Page** — IMPLEMENTED BASELINE
   *Implementation: `app/pricing/`, `app/pricing/es/`, `public/pricing/prices.md`*
