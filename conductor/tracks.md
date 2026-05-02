@@ -37,8 +37,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [ ] **Track 4: Bilingual Support (/es/ Spanish Section)**
   *Link: [./tracks/bilingual_es_20260502/](./tracks/bilingual_es_20260502/)*
 
-- [ ] **Track 6: County and Community Landing Pages**
-  *Link: [./tracks/area_pages_20260502/](./tracks/area_pages_20260502/)*
+- [x] **Track 6: County and Community Landing Pages** — COMPLETE (archived)
+  *Implementation: `app/areas/`, `components/areas/`, `app/areas/_data/`*
 
 - [ ] **Track 8: About / The Difference Page**
   *Link: [./tracks/about_page_20260502/](./tracks/about_page_20260502/)*
