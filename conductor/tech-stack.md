@@ -45,6 +45,18 @@
 | `npm run test` | Run Vitest (single pass) |
 | `npm run test:watch` | Run Vitest in watch mode |
 | `npm run coverage` | Run Vitest with V8 coverage report |
+| `npm run postbuild` | Run next-sitemap after build (auto-triggered by `npm run build`) |
+
+## Analytics
+- **GA4** — loaded via `next/script` in `app/layout.tsx` when `NEXT_PUBLIC_GA4_ID` env var is set
+- **Google Tag Manager** — loaded via `next/script` when `NEXT_PUBLIC_GTM_ID` is set; GA4 should then be managed through GTM
+- **Microsoft Clarity** — loaded via `next/script` (afterInteractive) when `NEXT_PUBLIC_CLARITY_ID` is set
+- **`lib/analytics.ts`** — `analytics` object with typed event helpers: `phoneClick`, `whatsAppClick`, `languageToggle`, `sampleReportView`, `pdfDownload`, `bookingStarted`, `bookingSubmitted`; pushes to `window.dataLayer`
+
+## SEO Utilities
+- **`next-sitemap`** — generates `public/sitemap.xml` + `public/robots.txt` via `postbuild` script; config at `next-sitemap.config.js`
+- **`lib/json-ld.ts`** — Schema.org helpers: `localBusinessSchema()`, `serviceSchema()`, `faqSchema()`, `personSchema()`
+- **`components/JsonLd.tsx`** — renders `<script type="application/ld+json">` for any schema object
 
 ## Brand Tokens & Styling Conventions
 - Brand color tokens defined in `app/globals.css` `@theme inline` block as `--color-brand-*` (primary, primaryDark, ink, paper, trust, growth, alert, warmth)
@@ -58,7 +70,7 @@
 - **shadcn 4.x uses `render={<element />}` prop instead of `asChild`** — all Base UI components use this pattern; e.g. `<Button render={<a href="..." />}>label</Button>`
 - Global styles and brand tokens live in `app/globals.css`
 - HomeKey brand tokens: `--color-hk-green-dark/light`, `--color-builder-red-dark/light`, `--color-stage-purple-dark/light`
-- **`next/image` `priority` prop is deprecated in Next.js 16** — use `loading="eager"` for above-fold images instead
+- **Use `priority` prop on above-fold `next/image` instances** — adds `fetchPriority="high"` + `<link rel="preload">`; do NOT use `loading="eager"` for LCP images
 - **All `next/image` instances with `fill` must include a `sizes` prop** — e.g. `sizes="100vw"` for full-width backgrounds, `sizes="(max-width: 768px) 100vw, 50vw"` for half-width
 - Stage illustrations in `BundleTimeline` are inline React SVG components (not `next/image`) so they inherit `currentColor` for accent color theming
 - **`matchMedia`, `ResizeObserver`, `IntersectionObserver` mocked globally in `vitest.setup.ts`** — required by embla-carousel-react in jsdom
