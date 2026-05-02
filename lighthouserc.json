@@ -1,12 +1,29 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./.next",
+      "startServerCommand": "npm run start -- -p 0",
+      "startServerReadyPattern": "Local:",
       "url": [
         "http://localhost:3000/",
+        "http://localhost:3000/services",
         "http://localhost:3000/services/home-inspection",
+        "http://localhost:3000/services/radon-testing",
+        "http://localhost:3000/new-construction",
+        "http://localhost:3000/pricing",
+        "http://localhost:3000/schedule",
+        "http://localhost:3000/about",
+        "http://localhost:3000/about/the-difference",
+        "http://localhost:3000/inspectors",
+        "http://localhost:3000/inspectors/ian-mcnaught",
+        "http://localhost:3000/blog",
+        "http://localhost:3000/blog/top-10-defects-new-construction",
+        "http://localhost:3000/areas",
+        "http://localhost:3000/areas/loudoun-county",
+        "http://localhost:3000/areas/loudoun-county/brambleton",
         "http://localhost:3000/es",
-        "http://localhost:3000/new-construction"
+        "http://localhost:3000/es/servicios/inspeccion-de-vivienda",
+        "http://localhost:3000/es/nueva-construccion",
+        "http://localhost:3000/es/precios"
       ],
       "numberOfRuns": 3
     },
