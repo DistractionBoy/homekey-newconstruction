@@ -6,7 +6,7 @@ export const en = {
   nav: {
     logo: 'HomeKey Inspections',
     links: [
-      { label: 'Services', href: '#' },
+      { label: 'Services', href: '/services' },
       { label: 'New Construction', href: '/new-construction', active: true },
       { label: 'Realtors', href: '#' },
       { label: 'About', href: '#' },
@@ -193,7 +193,7 @@ export const es: Content = {
   nav: {
     logo: 'HomeKey Inspections',
     links: [
-      { label: 'Servicios', href: '#' },
+      { label: 'Servicios', href: '/es/servicios' },
       { label: 'Nueva Construcción', href: '/new-construction/es', active: true },
       { label: 'Agentes', href: '#' },
       { label: 'Nosotros', href: '#' },
