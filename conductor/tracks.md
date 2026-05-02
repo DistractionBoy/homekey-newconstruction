@@ -21,7 +21,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track 2: Homepage** — COMPLETE (archived)
 
-- [x] **Track 3: Service Detail Pages** — COMPLETE (12 service pages + /services index)
+- [x] **Track 3: Service Detail Pages** — COMPLETE (archived)
   *Implementation: `app/services/`, `components/services/`, `app/services/_data/`*
 
 - [ ] **Track 5: Inspector Bio Pages**
