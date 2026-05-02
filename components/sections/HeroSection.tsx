@@ -58,12 +58,14 @@ export function HeroSection({ hero }: HeroSectionProps) {
         </motion.p>
         <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:flex-row">
           <Button
+            nativeButton={false}
             className="bg-brand-primary hover:bg-brand-primaryDark text-white shadow-sm hover:scale-[1.02] hover:shadow-md transition-all duration-200"
             render={<a href="#pricing" />}
           >
             {hero.primaryCta}
           </Button>
           <Button
+            nativeButton={false}
             variant="outline"
             className="hover:scale-[1.02] hover:shadow-md transition-all duration-200"
             render={<Link href="#" />}

@@ -36,6 +36,7 @@ export function BilingualContactCard() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
             <Button
+              nativeButton={false}
               size="sm"
               className="bg-brand-primary hover:bg-brand-primaryDark text-white"
               render={<a href="tel:+15712813846" />}
@@ -44,6 +45,7 @@ export function BilingualContactCard() {
               Llamar ahora
             </Button>
             <Button
+              nativeButton={false}
               size="sm"
               variant="outline"
               render={<a href="https://wa.me/15712813846" target="_blank" rel="noopener noreferrer" />}
@@ -52,6 +54,7 @@ export function BilingualContactCard() {
               WhatsApp
             </Button>
             <Button
+              nativeButton={false}
               size="sm"
               variant="outline"
               render={<Link href="/schedule" />}

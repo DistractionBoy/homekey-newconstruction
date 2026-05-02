@@ -149,6 +149,7 @@ export default function ContactoPage() {
               Elija la fecha, hora y tipo de inspección. Confirmaremos en 24 horas y le asignaremos a Sebastian o Jay si solicitó inspección en español.
             </p>
             <Button
+              nativeButton={false}
               size="lg"
               className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] transition-all duration-200"
               render={<Link href="/schedule" />}

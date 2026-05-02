@@ -120,6 +120,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button
+                nativeButton={false}
                 size="lg"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] transition-all duration-200"
                 render={<Link href="/about/the-difference" />}
@@ -127,6 +128,7 @@ export default function AboutPage() {
                 What makes us different →
               </Button>
               <Button
+                nativeButton={false}
                 variant="outline"
                 size="lg"
                 render={<Link href="/about/training-philosophy" />}
@@ -254,7 +256,7 @@ export default function AboutPage() {
               The full founder story — from a home improvement business in Southern California
               to building Northern Virginia&apos;s most thorough inspection team — is coming soon.
             </p>
-            <Button variant="outline" size="lg" render={<Link href="/schedule" />}>
+            <Button nativeButton={false} variant="outline" size="lg" render={<Link href="/schedule" />}>
               Schedule an inspection in the meantime →
             </Button>
           </div>

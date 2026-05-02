@@ -51,6 +51,7 @@ export function ServiceDetailPage({ data }: Props) {
             <p className="mb-8 text-lg text-white/70">{data.subtitle}</p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button
+                nativeButton={false}
                 size="lg"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] transition-all duration-200"
                 render={<Link href="/schedule" />}
@@ -58,6 +59,7 @@ export function ServiceDetailPage({ data }: Props) {
                 Schedule an inspection →
               </Button>
               <Button
+                nativeButton={false}
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white bg-white/10 hover:bg-white/20 transition-all duration-200"
@@ -281,6 +283,7 @@ export function ServiceDetailPage({ data }: Props) {
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button
+                nativeButton={false}
                 size="lg"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] hover:shadow-md transition-all duration-200"
                 render={<Link href="/schedule" />}
@@ -288,6 +291,7 @@ export function ServiceDetailPage({ data }: Props) {
                 Schedule an inspection →
               </Button>
               <Button
+                nativeButton={false}
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white bg-white/10 hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"

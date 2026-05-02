@@ -63,7 +63,12 @@ export function NavBar({ nav }: NavBarProps) {
           >
             {nav.langToggle.label}
           </Link>
-          <Button size="lg" className="px-4 text-base" render={<Link href={nav.ctaHref ?? '#'} />}>
+          <Button
+            nativeButton={false}
+            size="lg"
+            className="px-4 text-base"
+            render={<Link href={nav.ctaHref ?? '#'} />}
+          >
             {nav.cta}
           </Button>
         </div>
@@ -103,6 +108,7 @@ export function NavBar({ nav }: NavBarProps) {
                   </Link>
                 ))}
                 <Button
+                  nativeButton={false}
                   size="lg"
                   className="mt-2 px-4 text-base"
                   render={<Link href={nav.ctaHref ?? '#'} />}

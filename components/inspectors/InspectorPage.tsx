@@ -215,6 +215,7 @@ export function InspectorPage({ inspector }: Props) {
               </p>
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Button
+                  nativeButton={false}
                   size="lg"
                   className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] hover:shadow-md transition-all duration-200"
                   render={<Link href={`/schedule?inspector=${inspector.slug}`} />}
@@ -222,6 +223,7 @@ export function InspectorPage({ inspector }: Props) {
                   Book with {firstName} →
                 </Button>
                 <Button
+                  nativeButton={false}
                   variant="outline"
                   size="lg"
                   className="border-white/30 text-white bg-white/10 hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"
@@ -247,6 +249,7 @@ export function InspectorPage({ inspector }: Props) {
               </p>
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Button
+                  nativeButton={false}
                   size="lg"
                   className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] hover:shadow-md transition-all duration-200"
                   render={<a href="mailto:info@homekeyinspections.com" />}
@@ -254,6 +257,7 @@ export function InspectorPage({ inspector }: Props) {
                   Email the team →
                 </Button>
                 <Button
+                  nativeButton={false}
                   variant="outline"
                   size="lg"
                   className="border-white/30 text-white bg-white/10 hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"

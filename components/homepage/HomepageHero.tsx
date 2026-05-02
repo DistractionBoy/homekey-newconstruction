@@ -33,6 +33,7 @@ export function HomepageHero() {
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
+              nativeButton={false}
               size="lg"
               className="bg-brand-primary hover:bg-brand-primaryDark text-white shadow-sm hover:scale-[1.02] hover:shadow-md transition-all duration-200"
               render={<Link href="/schedule" />}
@@ -40,6 +41,7 @@ export function HomepageHero() {
               Schedule an inspection →
             </Button>
             <Button
+              nativeButton={false}
               variant="outline"
               size="lg"
               className="border-white/50 text-white bg-white/10 hover:bg-white/20 hover:scale-[1.02] hover:shadow-md transition-all duration-200"

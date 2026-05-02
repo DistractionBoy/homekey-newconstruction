@@ -43,6 +43,7 @@ export function InspectorSpotlight() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button
+                nativeButton={false}
                 size="sm"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white hover:scale-[1.02] transition-all duration-200"
                 render={<Link href={`/inspectors/${inspector.slug}`} />}
@@ -50,6 +51,7 @@ export function InspectorSpotlight() {
                 View full profile
               </Button>
               <Button
+                nativeButton={false}
                 variant="outline"
                 size="sm"
                 className="hover:scale-[1.02] transition-all duration-200"

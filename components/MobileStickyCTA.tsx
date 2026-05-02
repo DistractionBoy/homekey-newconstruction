@@ -22,7 +22,7 @@ export function MobileStickyCTA({ label }: MobileStickyCTAProps) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border/50 bg-background p-3 md:hidden">
-      <Button className="w-full" render={<a href="#pricing" />}>
+      <Button nativeButton={false} className="w-full" render={<a href="#pricing" />}>
         {label}
       </Button>
     </div>

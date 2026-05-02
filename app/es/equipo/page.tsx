@@ -109,6 +109,7 @@ export default function EquipoPage() {
                     ))}
                     <div className="mt-4 flex flex-wrap gap-2">
                       <Button
+                        nativeButton={false}
                         size="sm"
                         className="bg-brand-primary hover:bg-brand-primaryDark text-white"
                         render={<a href="tel:+15712813846" />}
@@ -116,7 +117,7 @@ export default function EquipoPage() {
                         <Phone className="mr-1.5 h-3.5 w-3.5" />
                         Llamar
                       </Button>
-                      <Button size="sm" variant="outline" render={<Link href={`/inspectors/${inspector.slug}`} />}>
+                      <Button nativeButton={false} size="sm" variant="outline" render={<Link href={`/inspectors/${inspector.slug}`} />}>
                         Ver perfil →
                       </Button>
                     </div>
@@ -187,6 +188,7 @@ export default function EquipoPage() {
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button
+                nativeButton={false}
                 size="lg"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 hover:scale-[1.02] hover:shadow-md transition-all duration-200"
                 render={<Link href="/schedule" />}
@@ -194,6 +196,7 @@ export default function EquipoPage() {
                 Agendar inspección →
               </Button>
               <Button
+                nativeButton={false}
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white bg-white/10 hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"
