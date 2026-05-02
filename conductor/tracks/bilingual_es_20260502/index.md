@@ -1,4 +1,4 @@
-# Track homepage_20260502 Context
+# Track bilingual_es_20260502 Context
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)

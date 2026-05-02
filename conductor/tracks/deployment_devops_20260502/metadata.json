@@ -1,0 +1,8 @@
+{
+  "track_id": "deployment_devops_20260502",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-02T00:00:00Z",
+  "updated_at": "2026-05-02T00:00:00Z",
+  "description": "Track 16 — Ship to production on Vercel with three environments, GitHub Actions CI, Sentry error tracking, and custom domain setup"
+}
