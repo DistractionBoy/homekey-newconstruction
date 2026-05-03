@@ -17,6 +17,9 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://homekeyinspections.com'
+  ),
   title: 'HomeKey Inspections — The Key to Knowing More®',
   description:
     'Independent home inspections in Northern Virginia, Maryland, DC & Texas. ASHI ACI certified. ISO/IEC 17025 lab. Thermal imaging standard.',
