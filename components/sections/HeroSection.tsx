@@ -56,7 +56,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
         >
           {hero.subheadline}
         </motion.p>
-        <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:flex-row">
+        <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:flex-row">
           <Button
             nativeButton={false}
             className="bg-brand-primary hover:bg-brand-primaryDark text-white shadow-sm hover:scale-[1.02] hover:shadow-md transition-all duration-200"
@@ -68,7 +68,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             nativeButton={false}
             variant="outline"
             className="hover:scale-[1.02] hover:shadow-md transition-all duration-200"
-            render={<Link href="#" />}
+            render={<Link href="/about/the-difference" />}
           >
             {hero.secondaryCta}
           </Button>

@@ -21,7 +21,7 @@ export default function SchedulePage() {
           Online booking is coming soon. In the meantime, call or email and we’ll get you on the calendar fast.
         </p>
 
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <a
             className="inline-flex h-9 items-center justify-center rounded-lg bg-brand-primary px-4 text-sm font-medium text-white hover:bg-brand-primaryDark transition-colors"
             href="tel:+15712813846"
