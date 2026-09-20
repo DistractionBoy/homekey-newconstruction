@@ -41,18 +41,20 @@ const buttonVariants = cva(
 )
 
 function Button({
-  className,
-  variant = "default",
-  size = "default",
-  ...props
+   className,
+   variant = "default",
+   size = "default",
+   nativeButton = false,
+   ...props
 }: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
   return (
-    <ButtonPrimitive
+     <ButtonPrimitive
       data-slot="button"
+      nativeButton={nativeButton}
       className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
-  )
-}
+       {...props}
+     />
+    )
+ }
 
 export { Button, buttonVariants }
